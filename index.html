@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Integración Multidimensional - Fintech</title>
+
+<style>
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 40px;
+    background-color: #f5f7fa;
+    color: #2c3e50;
+}
+
+h1, h2, h3 {
+    color: #1f3c88;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.08);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.metric {
+    font-weight: bold;
+    color: #34495e;
+}
+
+.aprobado {
+    color: #27ae60;
+    font-weight: bold;
+}
+
+.rechazado {
+    color: #c0392b;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th {
+    background-color: #1f3c88;
+    color: white;
+    padding: 8px;
+}
+
+td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+img {
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<h1>Integración Multidimensional - Fintech</h1>
+
+<div class="card">
+<h2>Introducción</h2>
+<p>
+Este análisis tiene como objetivo segmentar a los solicitantes de crédito en cinco sucursales mediante el algoritmo K-Medoids, utilizando variables sociodemográficas y financieras. 
+La finalidad es optimizar la operación de la entidad financiera, asignando clientes a sucursales con características homogéneas y facilitando la toma de decisiones en riesgo y colocación de crédito.
+</p>
+</div>
+
+<div class="card">
+<h2>Perfil promedio por sucursal</h2>
+<img src="grafico_arana.png" width="600">
+</div>
+
+<h2>Resultados por sucursal</h2>
+
+<div class="grid">
+
+    <div class="card">
+    <h3>Sucursal 1</h3>
+
+    <p class="metric">Clientes: 1518</p>
+    <p class="aprobado">Preaprobados: 643 (42.4%)</p>
+    <p class="rechazado">Prenegados: 875 (57.6%)</p>
+
+    <table>
+    <tr><th>Municipio</th><th>Clientes</th></tr>
+    <tr><td>Sabaneta</td><td>605</td></tr><tr><td>Caldas</td><td>545</td></tr><tr><td>Bello</td><td>199</td></tr><tr><td>Itagüí</td><td>162</td></tr><tr><td>Medellín</td><td>4</td></tr><tr><td>Envigado</td><td>3</td></tr></table></div>
+    <div class="card">
+    <h3>Sucursal 2</h3>
+
+    <p class="metric">Clientes: 1664</p>
+    <p class="aprobado">Preaprobados: 571 (34.3%)</p>
+    <p class="rechazado">Prenegados: 1093 (65.7%)</p>
+
+    <table>
+    <tr><th>Municipio</th><th>Clientes</th></tr>
+    <tr><td>Caldas</td><td>827</td></tr><tr><td>Sabaneta</td><td>668</td></tr><tr><td>Bello</td><td>80</td></tr><tr><td>Itagüí</td><td>58</td></tr><tr><td>Envigado</td><td>31</td></tr></table></div>
+    <div class="card">
+    <h3>Sucursal 3</h3>
+
+    <p class="metric">Clientes: 228</p>
+    <p class="aprobado">Preaprobados: 114 (50.0%)</p>
+    <p class="rechazado">Prenegados: 114 (50.0%)</p>
+
+    <table>
+    <tr><th>Municipio</th><th>Clientes</th></tr>
+    <tr><td>Sabaneta</td><td>97</td></tr><tr><td>Caldas</td><td>69</td></tr><tr><td>Bello</td><td>36</td></tr><tr><td>Itagüí</td><td>15</td></tr><tr><td>Medellín</td><td>8</td></tr><tr><td>Envigado</td><td>3</td></tr></table></div>
+    <div class="card">
+    <h3>Sucursal 4</h3>
+
+    <p class="metric">Clientes: 989</p>
+    <p class="aprobado">Preaprobados: 330 (33.4%)</p>
+    <p class="rechazado">Prenegados: 659 (66.6%)</p>
+
+    <table>
+    <tr><th>Municipio</th><th>Clientes</th></tr>
+    <tr><td>Caldas</td><td>437</td></tr><tr><td>Sabaneta</td><td>381</td></tr><tr><td>Itagüí</td><td>132</td></tr><tr><td>Bello</td><td>39</td></tr></table></div>
+    <div class="card">
+    <h3>Sucursal 5</h3>
+
+    <p class="metric">Clientes: 1443</p>
+    <p class="aprobado">Preaprobados: 1225 (84.9%)</p>
+    <p class="rechazado">Prenegados: 218 (15.1%)</p>
+
+    <table>
+    <tr><th>Municipio</th><th>Clientes</th></tr>
+    <tr><td>Bello</td><td>693</td></tr><tr><td>Medellín</td><td>436</td></tr><tr><td>Itagüí</td><td>221</td></tr><tr><td>Sabaneta</td><td>53</td></tr><tr><td>Envigado</td><td>40</td></tr></table></div>
+</div>
+
+<div class="card">
+<h2>Conclusiones</h2>
+
+<p>
+El proceso de segmentación permitió identificar diferencias claras entre los perfiles de los solicitantes de crédito, evidenciando una heterogeneidad significativa en términos de capacidad de pago y riesgo crediticio.
+</p>
+
+<p>
+Se destaca la existencia de una sucursal con alta calidad crediticia, esta es la Sucursal 5, la cual presenta una tasa de preaprobación del 84.9%, lo que sugiere un segmento con alta capacidad financiera. En contraste, otras sucursales concentran clientes con mayor probabilidad de rechazo, lo que implica mayores niveles de riesgo para la entidad.
+</p>
+
+<p>
+Adicionalmente, se identificaron patrones geográficos relevantes, donde ciertos municipios predominan en determinados clusters: mientras que Caldas y Sabaneta parecen predominar en las sucursales 1, 2 y 4, Bello y Medellín predominan en la sucursal 5, lo cual permite inferir comportamientos territoriales en la demanda de crédito.
+</p>
+
+<p>
+Desde una perspectiva estratégica, los resultados respaldan la viabilidad de operar con cinco sucursales, siempre que estas sean gestionadas bajo enfoques diferenciados, alineados con el perfil de riesgo y características de los clientes asignados.
+</p>
+
+<p>
+Como conclusión y sobre las **implicaciones de reducir a cinco sucursales, este proyecto se muestra viable**, solo es importante aclarar que deben existir estrategias diferenciadas, es decir, para la sucursal #5 se debe tener un enfoque más agresivo, que logre tener una mayor atracción comercial mediante la aprobación, y surte como un foco para el crecimiento de cartera, mientras que las sucursales #2 y #4 deben regirse por un enfoque más controlado con políticas más restrictivas o filtros más sofisticados.
+</p>
+
+</div>
+
+</div>
+</body>
+</html>
